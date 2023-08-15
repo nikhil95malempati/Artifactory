@@ -49,6 +49,6 @@ jobs:
       - name: output contents
         run: ls
       - name: output filename
-        run: ${{ needs.build.outputs.script-file}}         #needs contains info abt all job that are defined as dependency of curret job. for deploy build is needs obj so all info will be there in needs
+        run: echo "${{ needs.build.outputs.script-file}}"        #needs contains info abt all job that are defined as dependency of curret job. for deploy build is needs obj so all info will be there in needs
       - name: Deploy
         run: echo "Deploying..."
